@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import authService from '../service/auth';
 import getService from '../service/get';
+import { Link } from 'react-router-dom';
 
 
 function Item() {
@@ -46,8 +47,8 @@ setView(res.message);
 
   return (
     <div>
-        <div><p>Add new items to stocks </p></div>
-
+      <div><b><u> <h2 style={{color:'darkgreen', textAlign : "center", paddingTop:'10px'}}>Add New Items To Stocks</h2></u></b></div> <br />
+        
         <div>
            
            <form onSubmit={handleItem}>
@@ -111,6 +112,8 @@ setView(res.message);
            </form> <br />
 
            <p>{view}</p>
+
+           <p><b>Note :</b> You can <Link to='/addsupplier'>Add a new supplier </Link>here. </p>
         </div>
     
     </div>

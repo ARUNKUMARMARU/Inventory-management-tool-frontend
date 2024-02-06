@@ -12,10 +12,12 @@ function Dashboard() {
   return (
     <div className='pg'>
 
-        <div  style={{textAlign : "center", paddingTop:'10px'}}><h1>Welcome</h1></div>
+        <div  style={{textAlign : "center", paddingTop:'10px'}}> <b><h1>Welcome</h1></b>       
+        </div>
         <div>
             <img style={{display : 'flex'}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXRaPIzjLZBtEwa0aJfQxzCRn1x_GhVoTeeg&usqp=CAU" alt="logo" height={'100px'}/>
         </div>      
+        <div><b><u> <h2 style={{color:'darkgreen', textAlign : "center"}}>Dashboard</h2></u></b></div> <br />
 
         <div style={style}>
             

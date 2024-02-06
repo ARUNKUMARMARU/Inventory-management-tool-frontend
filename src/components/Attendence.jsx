@@ -4,6 +4,7 @@ import getService from '../service/get';
 import axios from 'axios';
 import Table from 'react-bootstrap/Table';
 import 'bootstrap/dist/css/bootstrap.css';
+import { Link } from 'react-router-dom';
 
 
 function Attendence(){  
@@ -34,6 +35,8 @@ function Attendence(){
    
   return (
     <div>
+       <div><b><u> <h2 style={{color:'darkgreen', textAlign : "center", paddingTop:'10px'}}>Staff Attendence</h2></u></b></div> <br />
+
        <div style={{padding:'10px'}}>
        <label htmlFor="date">Date : </label>
         <input type="date"/> <br /> <br />
@@ -85,6 +88,7 @@ function Attendence(){
           
           </div>
         </div>
+        <div><p><b>Note :</b> You can <Link to='/addstaff'>add a new staff</Link> here</p></div>
       
     </div>
   )

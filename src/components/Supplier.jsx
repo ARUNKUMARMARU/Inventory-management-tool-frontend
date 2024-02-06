@@ -36,6 +36,9 @@ function Supplier() {
   return (
     <body>
         <div style={{paddingTop:'10px', paddingLeft:'10px', backgroundColor:'lightyellow'}}>
+
+        <div><b><u> <h2 style={{color:'darkgreen', textAlign : "center", paddingTop:'10px'}}>Add New Supplier</h2></u></b></div> <br />
+
         <form onSubmit={handleSupplier}>
 
             <label htmlFor="name">Supplier Name  <span style={{color:'red'}}>*</span> : </label>&nbsp;

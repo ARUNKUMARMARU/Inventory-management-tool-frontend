@@ -38,6 +38,7 @@ const handleStaffDetails = async (e)=>{
 
   return (
     <div style={{paddingTop:'10px', paddingLeft:'10px', backgroundColor:'lightyellow'}}>
+       <div><b><u> <h2 style={{color:'darkgreen', textAlign : "center", paddingTop:'10px'}}>Add New Staff</h2></u></b></div> <br />
         <form onSubmit={handleStaffDetails}>
             <label htmlFor="name">Staff Name <span style={{color:'red'}}>*</span> : </label> &nbsp;
             <input type="text" style={{backgroundColor:'lightgray'}}

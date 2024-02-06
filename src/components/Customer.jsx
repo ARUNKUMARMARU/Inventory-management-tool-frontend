@@ -31,6 +31,8 @@ function Customer() {
 
   return (
     <div style={{paddingTop :'20px'}}>
+       <div><b><u> <h2 style={{color:'darkgreen', textAlign : "center", paddingTop:'10px'}}>Add New Customer</h2></u></b></div> <br /><br />
+
         <form action="" onSubmit={handleCustomer}>
 
         <label htmlFor="name">Customer Name : </label>

@@ -49,6 +49,7 @@ function Bill() {
   return (
     <div>
     
+    <div><b><u> <h2 style={{color:'darkgreen', textAlign : "center", paddingTop:'10px'}}>Invoice</h2></u></b></div> <br />
     
     <div style={{paddingTop : "10px"}}>
         
