@@ -1,0 +1,44 @@
+ul{
+ 
+    color: white;
+    background-color: blue;
+    padding: 10px;
+    color: white;
+    width: 300px; 
+    height: 500px;     
+  
+}
+   
+ 
+
+  li {
+   
+    display: list-item;    
+    border-bottom: 1px solid ;
+    border-bottom-color: rgb(100, 100, 234);
+    height: 50px;
+    text-align:left;
+    list-style-type: none;
+    
+  }
+
+ .demo {
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+    font-size: large;
+    font-family:'Times New Roman', Times, serif ;   
+    font-weight: 400;
+    padding-left: 30px;
+      
+  }
+  li:hover{
+    background-color: rgb(61, 61, 137);
+  }
+
+  .pg{
+    background-color: lightyellow;
+  }
+
+  
+  
