@@ -40,7 +40,8 @@ function Attendence(){
       
     }    
      
-    authService.attendence(newAttendence);  
+   const res =  authService.attendence(newAttendence);  
+   setView(res.message)
     
   };
    
@@ -100,6 +101,7 @@ function Attendence(){
          >
           Submit Attendance
          </button>
+         {view}
       </div>
         </div>
         <div><p><b>Note :</b> You can <Link to='/addstaff'>add a new staff</Link> here</p></div>
