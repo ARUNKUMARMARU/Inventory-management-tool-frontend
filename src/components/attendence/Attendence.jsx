@@ -5,12 +5,14 @@ import axios from 'axios';
 import Table from 'react-bootstrap/Table';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Link } from 'react-router-dom';
+import { Spin } from 'antd';
 
 
 function Attendence(){    
   const [status, setStatus] = useState({}); 
   const [getStaff, setGetStaff] = useState([]); 
   const [date, setDate] = useState(new Date().toISOString().split('T')[0]);
+  const [isLoading, setIsLoading] = useState(false);
   
   const [view, setView] = useState('');
 
@@ -29,7 +31,8 @@ function Attendence(){
   },[])
 
 
-  const handleTodayAttendance = ()=>{    
+  const handleTodayAttendance = async ()=>{   
+    setIsLoading(true);
     const newAttendence =       
     {
       date : date,
@@ -40,9 +43,10 @@ function Attendence(){
       
     }    
      
-   const res =  authService.attendence(newAttendence);  
+   const res = await authService.attendence(newAttendence);  
+   console.log(res.message)
    setView(res.message)
-    
+   setIsLoading(false)    
   };
    
   return (
@@ -96,13 +100,14 @@ function Attendence(){
             </tbody>
         </Table>      
         <div>
-         <button type="button" onClick={handleTodayAttendance}
-        //  disabled={attendanceSubmitted}
-         >
+         {
+          isLoading?<Spin></Spin>:<button type="button" onClick={handleTodayAttendance}>
           Submit Attendance
          </button>
-         {view}
+         }
+         
       </div>
+      <p style={{color:'green'}}>{view}</p>
         </div>
         <div><p><b>Note :</b> You can <Link to='/addstaff'>add a new staff</Link> here</p></div>
       

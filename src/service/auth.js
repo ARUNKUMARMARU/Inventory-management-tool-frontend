@@ -131,17 +131,10 @@ const authService = {
 
     attendence: async (newAttendence) => {
         try {
-            console.log(newAttendence);
+            
             const res = await instance.protectedInstance.post('/attendance', newAttendence)
-            console.log(res.data);
-
-            if (res.data) {
-                console.log('Today attendence added');
-                return res.data;
-            } else {
-                console.log('Error adding attemdence');
-                return res.data;
-            }
+            return res.data;
+           
         } catch (error) {
             console.log('Error adding attendence', error.message);
             return error.response.data;
