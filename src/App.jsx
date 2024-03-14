@@ -1,21 +1,23 @@
 import React from 'react';
-import { Routes, BrowserRouter as Router, Route } from 'react-router-dom';
+import { Routes, Navigate, BrowserRouter as Router, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 
 
-import Signup from './components/Signup';
-import Signin from './components/Signin';
-import Item from './components/Item';
-import Bill from './components/Bill';
-import Dashboard from './components/Dashboard';
-import Customer from './components/Customer';
-import Attendence from './components/Attendence';
-import Staff from './components/Staff';
-import Supplier from './components/Supplier';
+import Signup from './components/signup/Signup';
+import Signin from './components/login/Signin';
+import Item from './components/item/Item';
+import Bill from './components/bill/Bill';
+import Dashboard from './components/dashboard/Dashboard';
+import Customer from './components/customer/Customer';
+import Attendence from './components/attendence/Attendence';
+import Staff from './components/staff/Staff';
+import Supplier from './components/supplier/Supplier';
 
 
 function App() {
   return (
     <div>
+       <ToastContainer/>
       <Router>
         <div>
           <Routes>
@@ -23,7 +25,7 @@ function App() {
             <Route path='/signup' element={<Signup/>}/>        
             <Route path='/additem' element={<Item/>}/>
             <Route path='/billing' element={<Bill/>}/>
-            <Route path='/dashboard' element={<Dashboard/>}/>
+            <Route path='/dashboard' element={<Protected><Dashboard/></Protected>}/>
             <Route path='/addcustomer' element={<Customer/>}/>
             <Route path='/attendence' element={<Attendence/>}/>
             <Route path='/addstaff' element={<Staff/>}/>
@@ -37,3 +39,17 @@ function App() {
 }
 
 export default App
+
+
+function Protected({children}) {
+  const token = sessionStorage.getItem('token')
+  if(token){
+    return children
+  }
+  return (
+    
+      <Navigate to="/"></Navigate>
+    
+  )
+}
+

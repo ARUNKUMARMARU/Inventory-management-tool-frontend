@@ -1,0 +1,93 @@
+/* Bill.css */  
+  .form-group {
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+.form-group input[type="number"]{
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input[type="number"]:hover{
+  border-color:crimson;
+}
+  
+.form-group input:focus{
+  border: 3px solid #1100ff;  
+}
+
+  .invoice-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .invoice-table th,
+  .invoice-table td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  .invoice-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .invoice-table tbody tr:nth-child(even) {
+    background-color: #dca2a2 !important;
+  }
+  
+  .invoice-total {
+    margin-top: 20px;
+  }
+  
+  .invoice-button {
+    display: block;
+    margin: 0 auto;
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .custom-select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    outline: none;
+    background-color: #fff; 
+    color: #333; 
+    cursor: pointer; 
+    transition: border-color 0.3s ease;
+  }
+  
+  .custom-select:hover{
+    border-color:crimson;
+  }
+  .custom-select:focus {
+    border: 3px solid #1100ff;  
+  }
+
+  .invoice-button2 {
+   
+    margin: 0 auto;
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .view{
+    padding-left: 10px;
+    color: red;
+  }
+  .amountmsg{
+    color: red;
+  }

@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const baseURl = 'https://inventory-management-tool-be.onrender.com/api'; 
-
+ const baseURl = 'https://inventory-management-tool-be.onrender.com/api'; 
+//const baseURl = 'http://localhost:6001/api'
 const authInstance =axios.create({
     baseURL : baseURl,
     timeout : 5000,

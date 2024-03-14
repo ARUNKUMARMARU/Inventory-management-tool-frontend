@@ -5,33 +5,32 @@ import instance from "./instance";
 const authService = {
     signup: async (user) => {
         try {
-            console.log('Registering user...');
+           
             const res = await instance.authInstance.post('/signup', user);
 
             console.log(res.data);
 
             if (res.data) {
-                console.log('User registered successfully');
+                
                 return res.data;
             } else {
-                console.log('Error registering user');
+                
                 return res.data;
             }
         } catch (error) {
-            console.log('Error registering user');
+           
             return error.response.data;
         }
     },
 
     signin: async (user) => {
         try {
-            console.log('Authenticating user...');
+           
             const res = await instance.authInstance.post('/login', user);
 
-            console.log(res.data);
+           
 
-            if (res.data) {
-                console.log('User authenticated successfully');
+            if (res.data) {               
 
                 // store the token in the session storage
                 sessionStorage.setItem('token', res.data.token);
@@ -43,11 +42,11 @@ const authService = {
 
                 return res.data;
             } else {
-                console.log('Error authenticating user');
+               
                 return res.data;
             }
         } catch (error) {
-            console.log('Error authenticating user');
+            
             return error.response.data;
         }
     },
@@ -132,8 +131,8 @@ const authService = {
 
     attendence: async (newAttendence) => {
         try {
-            console.log('Adding today attendence...');
-            const res = await instance.protectedInstance.post('/attendence', newAttendence)
+            console.log(newAttendence);
+            const res = await instance.protectedInstance.post('/attendance', newAttendence)
             console.log(res.data);
 
             if (res.data) {

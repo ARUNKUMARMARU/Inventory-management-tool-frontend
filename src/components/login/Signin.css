@@ -1,0 +1,25 @@
+header{
+    background-color: burlywood;
+   text-align: center;
+   justify-content: center;   
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Times New Roman';
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    
+}
+.form-container {
+    width: 50%;   
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    align-items: center;
+  }
+  
