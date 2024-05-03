@@ -1,10 +1,10 @@
 import axios from "axios";
 
- const baseURl = 'https://inventory-management-tool-backend.vercel.app/'; 
+ const baseURl = 'https://inventory-management-tool-backend-shqe.onrender.com/api'; 
 //const baseURl = 'http://localhost:6001/api'
 const authInstance =axios.create({
     baseURL : baseURl,
-    timeout : 5000,
+    timeout : 15000,
     headers : {
         "Content-Type" : "application/json"
     }
@@ -12,7 +12,7 @@ const authInstance =axios.create({
 
 const protectedInstance = axios.create({
     baseURL : baseURl,
-    timeout : 5000,
+    timeout : 15000,
     headers : {
         "Content-Type" : "application/json"
     }

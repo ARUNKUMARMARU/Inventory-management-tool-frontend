@@ -45,6 +45,7 @@ setIsLoding(false)
     
     
   }else{
+    setIsLoding(false)
     setError("Please fill in both username and password fields.")
   }
   }
@@ -67,7 +68,7 @@ setIsLoding(false)
 
   <input type="email" 
   placeholder='sample123@gmail.com'
-  onChange={(e)=>setEmail(e.target.value)}/>
+  onChange={(e)=>{setEmail(e.target.value), setError('')}}/>
 </div><br />
 
 <div>
@@ -75,7 +76,7 @@ setIsLoding(false)
   </label> &nbsp;
   <input type="password" autoComplete='on' 
   placeholder='AaBb#%&123'
-  onChange={(e)=>setPassword(e.target.value)} 
+  onChange={(e)=>{setPassword(e.target.value),setError('')}} 
    />
    <p style={{color:'black'}}>(Must contain at least one number and one uppercase and lowercase letter, and one special chatacter and at least 8 or more characters)</p>
 </div>

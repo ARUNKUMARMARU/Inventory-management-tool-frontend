@@ -8,7 +8,7 @@ const authService = {
            
             const res = await instance.authInstance.post('/signup', user);
 
-            console.log(res.data);
+            
 
             if (res.data) {
                 
@@ -18,7 +18,7 @@ const authService = {
                 return res.data;
             }
         } catch (error) {
-           
+          
             return error.response.data;
         }
     },
