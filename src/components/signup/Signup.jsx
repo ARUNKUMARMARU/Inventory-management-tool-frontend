@@ -45,6 +45,7 @@ function Signup() {
       const res = await authService.signup(user);
 
       if (res.hasOwnProperty('error')) {
+        setIsLoading(false);
         setErrorMessage2("This MailId Was Alredy Registered")
       } else {
         setEmail("");
