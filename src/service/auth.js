@@ -8,18 +8,18 @@ const authService = {
            
             const res = await instance.authInstance.post('/signup', user);
 
-            console.log("Responce :",res)
+            
 
-            // if (res.data) {
+            if (res.data) {
                 
-            //     return res.data;
-            // } else {
+                return res.data;
+            } else {
                 
-            //     return res.data;
-            // }
+                return res.data;
+            }
         } catch (error) {
-          console.log("Error :", error)
-            //return error.response.data;
+          
+            return error.response.data;
         }
     },
 
